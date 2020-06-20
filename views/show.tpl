@@ -77,7 +77,7 @@
   <header>
     <h1 class="logo">欢迎来到二维码生成实验计划</h1>
     <div class="description">
-      <p>{{.tel}}</p>
+      <p>您的手机号是:{{.tel}}</p>
     </div>
   </header>
   <footer>
