@@ -22,12 +22,12 @@ func (c *MainController) Get() {
 }
 
 func (c *MainController) FormData() {
-	fmt.Println("到这里了。。。。",c.GetString("tel"))
+	fmt.Println("到这里了。。。。", c.GetString("tel"))
 	tel := c.GetString("tel")
-	qrUrl := `static/img/`+tel+`.png`
+	qrUrl := `static/img/` + tel + `.png`
 	err := qrcode.WriteFile(`http://106.12.38.239:8888/tel?tel=`+tel, qrcode.Medium, 256, qrUrl)
 	if err != nil {
-		fmt.Println("write error")
+		fmt.Println(err)
 	}
 	c.Data["tel"] = tel
 	//c.Data["Email"] = "astaxie@gmail.com"
