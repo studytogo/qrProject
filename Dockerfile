@@ -12,7 +12,7 @@ ENV GOPROXY https://goproxy.io/
 
 ENV GO111MODULE on
 
-WORKDIR $GOPATH/src/actual_practice
+WORKDIR $GOPATH/src/qrProject
 
 ADD . .
 
